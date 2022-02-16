@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Flexbox and Grid</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./Image/Logo 2.jpg" type="image/x-icon">
+    <!-- boxicons -->
+    <link rel="stylesheet" href="./boxicons-2.1.1/css/boxicons.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- app css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="mode-day">
+
+    <header>
+        <div class="wrapper container">
+            <a href="#" class="logo"><img srcset="./Image/Logo.jpg 2x" alt="logo"></a>
+            <ul class="nav">
+                <li class="nav-item" data-option="flex"><a href="#">Flexbox</a></li>
+                <li class="nav-item" data-option="grid"><a href="#">Grid</a></li>
+                <li class="nav-item nav-color">
+                    <a href="#">Color</a>
+                    <div class="color-box"></div>
+                </li>
+            </ul>
+            <div class="mode-button day-on">
+                <div class="mode-contain day-mode">
+                    <i class='bx bx-sun'></i>
+                    <p>Day</p>
+                </div>
+                <div class="button-change"></div>
+                <div class="mode-contain night-mode">
+                    <i class='bx bx-moon'></i>
+                    <p>Night</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main section">
+        <div class="main-content container">
+            <div class="real-box">
+                <div class="customization">
+                    <div class="custom-contain custom-item">
+                        <label for="" class="box-title">Box</label>
+                        <input type="text" disabled>
+                    </div>
+                    <div class="custom-child custom-item">
+                        <label for="" class="box-title">Item</label>
+                        <input type="text" placeholder="number">
+                    </div>
+                    <div class="custom-space custom-item">
+                        <label for="" class="box-title">Padding</label>
+                        <input type="text" placeholder="rem">
+                    </div>
+                    <div class="custom-border custom-item">
+                        <label for="" class="box-title">Border</label>
+                        <input type="text" placeholder="px">
+                    </div>
+                </div>
+                <div class="main-box">
+                    <span class="control-box">
+                        <i class='bx bx-chevrons-right'></i>
+                    </span>
+                </div>
+                <div class="note-box">
+                    <div class="note-att">
+                        <p class="att-name">Note 1:</p>
+                        <p class="att-des">Mô tả thuộc tính CSS Mô tả thuộc tính CSS Mô tả thuộc tính CSS Mô tả thuộc
+                            tính CSS Mô tả thuộc tính CSS Mô tả thuộc tính CSS </p>
+                    </div>
+                    <div class="note-value">
+                        <p class="value-name">Note 2:</p>
+                        <p class="value-des">Mô tả thuộc tính của thuộc tính Mô tả thuộc tính của thuộc tính Mô tả thuộc
+                            tính của thuộc tính Mô tả thuộc tính của thuộc tính Mô tả thuộc tính của thuộc tính </p>
+                    </div>
+                </div>
+            </div>
+            <div class="attribute-box contain-box">
+                <!-- <h3 class="box-title">Container CSS</h3>
+                 <div class="box-drop drop">
+                    <p class="box-name">
+                        <i class='bx bx-chevron-right'></i>
+                        <i class='bx bx-chevron-down'></i>
+                        Display
+                    </p>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <label for="">Attribute</label>
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+                <div class="box-drop drop">
+                    <p class="box-name">
+                        <i class='bx bx-chevron-right'></i>
+                        <i class='bx bx-chevron-down'></i>
+                        Display
+                    </p>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <label for="">Attribute</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                </div> -->
+            </div>
+            <div class="attribute-box item-box">
+                <!--  <h3 class="box-title">Items CSS</h3>
+               <div class="box-drop drop">
+                    <p class="box-name">
+                        <i class='bx bx-chevron-right'></i>
+                        <i class='bx bx-chevron-down'></i>
+                        Display
+                    </p>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <label for="">Attribute</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                </div>
+                <div class="box-drop drop">
+                    <p class="box-name">
+                        <i class='bx bx-chevron-right'></i>
+                        <i class='bx bx-chevron-down'></i>
+                        Display
+                    </p>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                    <div class="attribute-item">
+                        <label for="">Attribute</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="attribute-item">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Attribute</label>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

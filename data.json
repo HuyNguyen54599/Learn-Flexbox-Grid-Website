@@ -1,0 +1,879 @@
+{
+  "flexbox": {
+    "container": {
+      "display": {
+        "id": 1,
+        "description": "Xác định kiểu và cách phần tử hiển thị trên web",
+        "value": [
+          {
+            "id": "D01",
+            "name": "flex",
+            "owner": "display",
+            "description": "Kích hoạt flexbox, tất cả các item bên trong box - 'vùng chứa linh hoạt' sẽ nằm trên 1 hàng, vùng chứa sẽ hoạt động như 1 phần tử Block"
+          },
+          {
+            "id": "D02",
+            "name": "inline-flex",
+            "owner": "display",
+            "description": "Kích hoạt flex box, vùng chứa sẽ hoạt động như 1 phần tử Inline"
+          }
+        ]
+      },
+      
+      "flex-direction": {
+        "id": 2,
+        "description": "Xác định hướng của trục main-axis, nhờ vào đó có thể điều hướng các item theo trục main-axis",
+        "value": [
+          {
+            "id": "FD1",
+            "name": "row",
+            "owner": "flex-direction",
+            "description": "Main-axis nằm ngang, các item được điều hướng nằm ngang và có chiều từ trái sang phải ltr"
+          },
+          {
+            "id": "FD2",
+            "name": "row-reverse",
+            "owner": "flex-direction",
+            "description": "Main-axis nằm ngang, các item được điều hướng nằm ngang và có chiều từ phải sang trái rtl"
+          },
+          {
+            "id": "FD3",
+            "name": "column",
+            "owner": "flex-direction",
+            "description": "Main-axis nằm dọc, các item được điều hướng nằm dọc và có chiều từ trên xuống dưới ttb"
+          },
+          {
+            "id": "FD4",
+            "name": "column-reverse",
+            "owner": "flex-direction",
+            "description": "Main-axis nằm dọc, các item được điều hướng nằm dọc và có chiều từ dưới lên trên btt"
+          }
+        ]
+      },
+  
+      "flex-wrap": {
+        "id": 3,
+        "description": "Theo mặc định, tất cả item sẽ cố gắng vừa với 1 dòng, thuộc tính này giúp các item có thể được bọc lại(xuống dòng)",
+        "value": [
+          {
+            "id": "FW1",
+            "name": "nowrap",
+            "owner": "flex-wrap",
+            "description": "Mặc định, tất cả các item đều trên 1 dòng"
+          },
+          {
+            "id": "FW2",
+            "name": "wrap",
+            "owner": "flex-wrap",
+            "description": "Các item sẽ quấn thành nhiều dòng từ trên xuống dưới - hiểu phổ thông là có thể xuống hàng"
+          },
+          {
+            "id": "FW3",
+            "name": "wrap-reverse",
+            "owner": "flex-wrap",
+            "description": "Ngược lại, các item sẽ quấn thành nhiều dòng từ dưới lên trên"
+          }
+        ]
+      },
+  
+      "flex-flow": {
+        "id": 4,
+        "description": "Viết tắt của 2 thuộc tính flex-direction và flex-wrap",
+        "value": [
+          {
+            "id": "FF1",
+            "name": "column wrap",
+            "owner": "flex-flow",
+            "description": "Main-axis nằm dọc, các phần tử được sắp xếp từ trên xuống dưới và có thể chuyển cột nhờ wrap"
+          }
+        ]
+      },
+  
+      "justify-content": {
+        "id": 5,
+        "description": "Xác định cách phân phối không gian giữa và xung quanh các item dọc theo main-axis",
+        "value": [
+          {
+            "id": "JC1",
+            "name": "flex-start",
+            "owner": "justify-content",
+            "description": "Các mục được đóng gói hẳn về đầu box - main-start của main-axis"
+          },
+          {
+            "id": "JC2",
+            "name": "flex-end",
+            "owner": "justify-content",
+            "description": "Các mục được đóng gói hẳn về cuối box - main-end của main-axis"
+          },
+          {
+            "id": "JC3",
+            "name": "start",
+            "owner": "justify-content",
+            "description": "Ít gặp, đọc trên csstricks. Các item được đóng gói nằm sát nhau về phía mép bắt đầu của box theo trục main-axis"
+          },
+          {
+            "id": "JC4",
+            "name": "end",
+            "owner": "justify-content",
+            "description": "Ít gặp, đọc trên csstricks. Các item được đóng gói nằm sát nhau về phía mép cuối của box theo trục main-axis"
+          },
+          {
+            "id": "JC5",
+            "name": "left",
+            "owner": "justify-content",
+            "description": "Ít gặp, đọc trên csstricks. The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like start"
+          },
+          {
+            "id": "JC6",
+            "name": "right",
+            "owner": "justify-content",
+            "description": "Ít gặp, đọc trên csstricks. The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like start"
+          },
+          {
+            "id": "JC7",
+            "name": "center",
+            "owner": "justify-content",
+            "description": "Item vào center của box, theo trục main-axis"
+          },
+          {
+            "id": "JC8",
+            "name": "space-between",
+            "owner": "justify-content",
+            "description": "Các item được tách ra và được phân phối đều trong box theo main-axis, không có khoảng cách 2 mép box"
+          },
+          {
+            "id": "JC9",
+            "name": "space-around",
+            "owner": "justify-content",
+            "description": "Các item có khoảng cách, không gian xung quanh như nhau, vì thế nên khoảng cách giữa 2 item = không gian item 1 + 2, điều này làm cho khoảng cách từ mép box đến item đầu/cuối không đều như khoảng các giữa 2 item"
+          },
+          {
+            "id": "JC10",
+            "name": "space-evenly",
+            "owner": "justify-content",
+            "description": "các mục được phân phối sao cho khoảng cách giữa hai mục bất kỳ (và khoảng trống đến các cạnh box) là bằng nhau."
+          },
+          {
+            "id": "JC11",
+            "name": "safe/unsafe",
+            "owner": "justify-content",
+            "description": "Ít dùng, ngăn việc mất data khi căn chỉnh, đọc thêm: https://www.stefanjudis.com/today-i-learned/safe-unsafe-alignment-in-css-flexbox/"
+          }
+        ]
+      },
+  
+      "align-items": {
+        "id": 6,
+        "description": "Căn chỉnh các item theo cross-axis, cứ coi như là justify-content theo chiều cross-axis",
+        "value": [
+          {
+            "id": "AI1",
+            "name": "stretch",
+            "owner": "align-items",
+            "description": "Mặc định, kéo dài để lấp đầy vùng chứa - dọc theo cross-axis (vẫn tuân theo chiều rộng tối thiểu / chiều rộng tối đa)"
+          },
+          {
+            "id": "AI2",
+            "name": "flex-start",
+            "owner": "align-items",
+            "description": "Item được đặt ở đầu trực cross-axis, start/self-start cũng tương tự nhưng The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules"
+          },
+          {
+            "id": "AI3",
+            "name": "flex-end",
+            "owner": "align-items",
+            "description": "Item được đặt ở cuối trực cross-axis, end/self-end cũng tương tự nhưng The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules."
+          },
+          {
+            "id": "AI4",
+            "name": "center",
+            "owner": "align-items",
+            "description": "các item đc căn giữa theo trục cross-axis"
+          },
+          {
+            "id": "AI5",
+            "name": "baseline",
+            "owner": "align-items",
+            "description": "Item được sắp xếp trên 1 hàng baseline của nội dung bên trong(text) từng item"
+          }
+        ]
+      },
+  
+      "align-content": {
+        "id": 7,
+        "description": "Lưu ý: Thuộc tính này chỉ có hiệu lực trên các vùng chứa linh hoạt nhiều dòng, trong đó flex-wrapđược đặt thành một trong hai wraphoặc wrap-reverse). Vùng chứa linh hoạt một dòng (tức là nơi flex-wrapđược đặt thành giá trị mặc định của nó, no-wrap) sẽ không phản ánh align-content. Thao tác này căn chỉnh các đường của vùng chứa linh hoạt bên trong khi có thêm không gian trong trục chéo, tương tự như cách justify-contentcăn chỉnh các mục riêng lẻ trong trục chính. Thường dùng khi có rất rất nhiều item bên trong box - align-content manages the space between the lines when items wrap. align-items aligns the items relative to each other when sizes of items are different. When the size of the items are the same and there is only one line, they behave similarly.Các align-itemstài sản của flex-box gắn các mục bên trong một container flex dọc theo trục chéo giống như justify-contentthực hiện dọc theo trục chính. (Đối với mặc định flex-direction: row, trục chéo tương ứng với trục dọc và trục chính tương ứng với chiều ngang. Với flex-direction: columnhai trục này được hoán đổi tương ứng). Nhưng align-contentlà cho hộp linh hoạt nhiều dòng. Nó không có hiệu lực khi các mục nằm trong một dòng duy nhất. Nó căn chỉnh toàn bộ cấu trúc theo giá trị của nó",
+        "value": [
+          {
+            "id": "IC1",
+            "name": "normal",
+            "owner": "align-content",
+            "description": "Mặc định,  các mục được đóng gói ở vị trí mặc định của chúng như thể không có giá trị nào được đặt"
+          },
+          {
+            "id": "IC2",
+            "name": "flex-start",
+            "owner": "align-content",
+            "description": "Các item được chuyển đến đầu cross-axis, giá trị start cũng tương tự The (more supported) flex-start honors the flex-direction while start honors the writing-mode direction"
+          },
+          {
+            "id": "IC3",
+            "name": "flex-end",
+            "owner": "align-content",
+            "description": "Các item được chuyển đến cuối cross-axis, giá trị end cũng tương tự The (more support) flex-end honors the flex-direction while end honors the writing-mode direction."
+          },
+          {
+            "id": "IC4",
+            "name": "center",
+            "owner": "align-content",
+            "description": "Các item đc căn giữa trong box"
+          },
+          {
+            "id": "IC5",
+            "name": "space-between",
+            "owner": "align-content",
+            "description": "Các item cách nhau và không có khoảng cách với đầu và cuối box"
+          },
+          {
+            "id": "IC6",
+            "name": "space-around",
+            "owner": "align-content",
+            "description": "Các item có khoảng cách xung quanh chính nó"
+          },
+          {
+            "id": "IC7",
+            "name": "space-evenly",
+            "owner": "align-content",
+            "description": "Khoảng cách đều nhau giữa các item và item với box"
+          },
+          {
+            "id": "IC8",
+            "name": "stretch",
+            "owner": "align-content",
+            "description": "Các item kéo dài và chiếm phần không gian còn lại của box"
+          }
+        ]
+      },
+  
+      "row-gap": {
+        "id": 8,
+        "description": "Kiểm soát khoảng cách giữa các hàng item - nếu có wrap",
+        "value": [] 
+      },
+  
+      "column-gap": {
+        "id": 9,
+        "description": "Kiểm soát khoảng cách giữa các cột item",
+        "value": [] 
+      },
+  
+      "gap": {
+        "id": 10,
+        "description": "Viết tắt của row-gap column-gap, nếu chỉ có 1 giá trị sẽ được hiểu là cả row và column có gap là giá trị chung đó",
+        "value": [] 
+      }
+    },
+    "item": {
+        "order": {
+          "id": 1,
+          "description": "Theo mặc định các item được sắp xếp theo thứ tự code, thuộc tính này kiểm soát thứ tự của các item",
+          "value": []
+        },
+  
+        "flex-grow": {
+          "id": 2,
+          "description": "Mặc định là 0, box giãn nở thì thằng nào có chỉ số grow lớn sẽ nở bự hơn thằng khác, item 1 là 1, item 2 là 2, thì 2 và 1 sẽ chiếm hết phần trống của box khi nở, và 2 sẽ nở bự gấp đôi 1",
+          "value": []
+        },
+  
+        "flex-shrink": {
+          "id": 3,
+          "description": "Mặc định là 1, khi box co lại, item shrink lớn hơn sẽ co lại nhiều hơn",
+          "value": []
+        },
+  
+        "flex-basic": {
+          "id": 4,
+          "description": "Mặc định là auto, xác định kích thước của item trước khi không gian còn lại của box đc phân phối cho các item khác",
+          "value": []
+        },
+  
+        "flex": {
+          "id": 5,
+          "description": "Viết tắt của flex-grow, flex-shrink và flex-basis. Mặc định là 0 1 auto",
+          "value": []
+        },
+  
+        "align-self": {
+          "id": 6,
+          "description": "Thuộc align-selftính chỉ định căn chỉnh cho mục đã chọn bên trong vùng chứa linh hoạt.Thuộc align-self tính ghi đè căn chỉnh mặc định do thuộc tính của vùng chứa đặt align-items",
+          "value": [
+            {
+              "id": "AS1",
+              "name": "stretch",
+              "owner": "align-items",
+              "description": "Mặc định, kéo dài để lấp đầy vùng chứa - dọc theo cross-axis (vẫn tuân theo chiều rộng tối thiểu / chiều rộng tối đa)"
+            },
+            {
+              "id": "AS2",
+              "name": "flex-start",
+              "owner": "align-items",
+              "description": "Item được đặt ở đầu trực cross-axis, start/self-start cũng tương tự nhưng The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules"
+            },
+            {
+              "id": "AS3",
+              "name": "flex-end",
+              "owner": "align-items",
+              "description": "Item được đặt ở cuối trực cross-axis, end/self-end cũng tương tự nhưng The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules."
+            },
+            {
+              "id": "AS4",
+              "name": "center",
+              "owner": "align-items",
+              "description": "các item đc căn giữa theo trục cross-axis"
+            },
+            {
+              "id": "AS5",
+              "name": "baseline",
+              "owner": "align-items",
+              "description": "Item được sắp xếp trên 1 hàng baseline của nội dung bên trong(text) từng item"
+            }
+          ]
+        },
+        "background-color": {
+          "id": 7,
+          "description": "Tô màu cho item",
+          "value": []
+        }
+    }
+  },
+  "grid": {
+    "container": {
+      "display": {
+        "id": 1,
+        "description": "Xác định một phần tử grid",
+        "value": [
+          {
+            "id": "D01",
+            "name": "grid",
+            "owner": "display",
+            "description": "Phần tử là block và kích hoạt grid, thiết lập một lưới"
+          },
+          {
+            "id": "D02",
+            "name": "inline-grid",
+            "owner": "display",
+            "description": "Phần tử là inline và ích hoạt grid, thiết lập một lưới"
+          }
+        ]
+      },
+
+      "grid-template-columns": {
+        "id": 2,
+        "description": "Định nghĩa column, xác định số cột trong grid container và kích thước của cột",
+        "value": [
+          {
+            "id": "TC1",
+            "name": "",
+            "owner": "grid-tempalte-columns",
+            "description": "1fr 1fr || minmax(10px, 1fr) 3f || rrepeat(5, 1fr) || 50px auto 100px 1fr || Giá trị có thể là chiều dài, phần trăm, 1 phần không gian trống trong grid container - a fraction of the free space in the grid(fr), ta cũng có thể đặt tên tùy ý, các line cũng tự động đánh số dương, số âm sẽ đi theo chiều ngược lại, nhưng ta cũng có thể đặt tên cho line, 1 line có thể có nhiều hơn 1 tên(line ở đây hiểu là, grid chia 3 cột, thì cạnh đầu là 1 line, 2 khoảng trống giữa 3 cột là 2 line nữa, cạnh cuối của container là 1 line nữa, 3 cột 4 line)-csstricks để xem thêm || https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns"
+          }
+        ]
+      },
+
+      "grid-template-rows": {
+        "id": 3,
+        "description": "Định nghĩa row, xác định số hàng trong grid container và kích thước của cột",
+        "value": [
+          {
+            "id": "TR1",
+            "name": "",
+            "owner": "grid-tempalte-rows",
+            "description": "min-content 1fr min-content || 100px 1fr max-content || Giá trị có thể là chiều dài, phần trăm, 1 phần không gian trống trong grid container - a fraction of the free space in the grid(fr), ta cũng có thể đặt tên tùy ý, các line cũng tự động đánh số dương, số âm sẽ đi theo chiều ngược lại, nhưng ta cũng có thể đặt tên cho line, 1 line có thể có nhiều hơn 1 tên(line ở đây hiểu là, grid chia 3 cột, thì cạnh đầu là 1 line, 2 khoảng trống giữa 3 cột là 2 line nữa, cạnh cuối của container là 1 line nữa, 3 cột 4 line)-csstricks để xem thêm || https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns"
+          }
+        ]
+      },
+
+      "grid-template-areas": {
+        "id": 4,
+        "description": "Xác định bố cục các item bằng cách tham chiếu tên của các vùng đc chỉ định bằng huộc tính grid-area(đặt tên cho các item bằng thuộc tính grid-area). Việc lặp lại tên của một vùng grid làm cho nội dung trải dài các ô đó. Dấu chấm biểu thị một ô trống",
+        "value": [
+          {
+            "id": "TA1",
+            "name": "",
+            "owner": "grid-template-areas",
+            "description": "Đặt tên cho item bằng thuộc tính grid-area, dấu . là 1 ô trống, none là không có vùng lưới nào được xác định, mỗi hàng đặt trong 1 dấu ngoặc kép, hàng mới thì xuống hàng đặt thêm dấu ngoặc kép nữa, mỗi hàng đều phải có cùng số ô"
+          }
+        ]
+      },
+
+      "grid-template": {
+        "id": 5,
+        "description": "Viết tắt của  grid-template-rows, grid-template-columns, and grid-template-areas",
+        "value": [
+          {
+            "id": "GT1",
+            "name": "",
+            "owner": "grid-template",
+            "description": "Sẽ k dùng, nên k cần hiểu sâu none – sets all three properties to their initial values, vgrid-template-rows> / vgrid-template-columns> – sets grid-template-columns and grid-template-rows to the specified values, respectively, and sets grid-template-areas to none"
+          }
+        ]
+      },
+
+      "column-gap": {
+        "id": 6,
+        "description": "Chỉ định kích thước của các đường lưới. Bạn có thể nghĩ về nó giống như thiết lập chiều rộng của máng xối giữa các cột / hàng(chúng ta gọi nó là gutter ấy). Chúng cũng có tên cũ là grid-column-gap, grid-row-gap",
+        "value": [
+          {
+            "id": "CG1",
+            "name": "",
+            "owner": "column-gap",
+            "description": "Chỉ định kích thước của các đường lưới. Bạn có thể nghĩ về nó giống như thiết lập chiều rộng của máng xối giữa các cột / hàng(chúng ta gọi nó là gutter ấy). Chúng cũng có tên cũ là grid-column-gap, grid-row-gap"
+          }
+        ]
+      },
+
+      "row-gap": {
+        "id": 7,
+        "description": "Chỉ định kích thước của các đường lưới. Bạn có thể nghĩ về nó giống như thiết lập chiều rộng của máng xối giữa các cột / hàng(chúng ta gọi nó là gutter ấy). Chúng cũng có tên cũ là grid-column-gap, grid-row-gap",
+        "value": [
+          {
+            "id": "RG1",
+            "name": "",
+            "owner": "row-gap",
+            "description": "Chỉ định kích thước của các đường lưới. Bạn có thể nghĩ về nó giống như thiết lập chiều rộng của máng xối giữa các cột / hàng(chúng ta gọi nó là gutter ấy). Chúng cũng có tên cũ là grid-column-gap, grid-row-gap"
+          }
+        ]
+      },
+
+      "gap": {
+        "id": 8,
+        "description": "Tên cũ là grid-gap, tên mới là gap A shorthand for row-gap and column-gap",
+        "value": [
+          {
+            "id": "GG1",
+            "name": "",
+            "owner": "gap",
+            "description": "vgrid-row-gap> vgrid-column-gap> – length values, nếu chỉ có 1 giá trị thì row column cũng đều có gap"
+          }
+        ]
+      },
+
+      "justify-items": {
+        "id": 9,
+        "description": "Căn chỉnh các item theo line row(theo hàng)( inline (row) axis) trái ngược với  align-items căn chỉnh dọc theo cột(block (column) axis), giá trị này áp dụng cho tất cả item trong grid container",
+        "value": [
+          {
+            "id": "JI1",
+            "name": "start",
+            "owner": "justify-items",
+            "description": "Các item nằm hết về đầu ô của item đó"
+          },
+          {
+            "id": "JI2",
+            "name": "end",
+            "owner": "justify-items",
+            "description": "Các item nằm hết về cuối ô của item đó"
+          },
+          {
+            "id": "JI3",
+            "name": "center",
+            "owner": "justify-items",
+            "description": "Các item nằm hết về giữa ô của item đó"
+          },
+          {
+            "id": "JI4",
+            "name": "stretch",
+            "owner": "justify-items",
+            "description": "Mặc định, item bành ra chiếm trọn chiều rộng ô"
+          }
+        ]
+      },
+
+      "align-items": {
+        "id": 10,
+        "description": "Căn chỉnh các item theo line column(theo cột)( block (column) axis) trái ngược với  justify-items căn chỉnh dọc theo hàng(inline (row) axis), giá trị này áp dụng cho tất cả item trong grid container",
+        "value": [
+          {
+            "id": "AI1",
+            "name": "stretch",
+            "owner": "align-items",
+            "description": "Mặc định, item bành ra chiếm trọn chiều cao ô"
+          },
+          {
+            "id": "AI2",
+            "name": "start",
+            "owner": "align-items",
+            "description": "Item nằm hết về phía trên của ô"
+          },
+          {
+            "id": "AI3",
+            "name": "end",
+            "owner": "align-items",
+            "description": "Item nằm hết về phía dưới của ô"
+          },
+          {
+            "id": "AI4",
+            "name": "center",
+            "owner": "align-items",
+            "description": "Item nằm hết về giữa của ô - giữa ngang"
+          },
+          {
+            "id": "AI5",
+            "name": "baseline",
+            "owner": "align-items",
+            "description": "Item nằm hết trên đường văn bản cơ sở"
+          }
+        ]
+      },
+
+      "place-items": {
+        "id": 11,
+        "description": "place-items đặt cả 2 thuộc tính align-items và thuộc tính justify-items trong một khai báo duy nhất",
+        "value": [
+          {
+            "id": "PI1",
+            "name": "",
+            "owner": "place-items",
+            "description": "valign-items> / vjustify-items>  - Bộ giá trị đầu tiên  align-items, giá trị thứ hai  justify-items. Nếu giá trị thứ hai bị bỏ qua, giá trị đầu tiên được gán cho cả hai thuộc tính"
+          }
+        ]
+      },
+
+      "justify-content": {
+        "id": 12,
+        "description": "Căn theo cột, Đôi khi tổng kích thước bên trong không bằng grid container, ví dụ các item set cứng kích thước bằng px, trường hợp này ta có thể bê hết cả cột hàng(nội dung bên trong grid container) để căn chỉnh tụi nó nằm trên dưới tráI phải grid container, Thuộc tính này căn chỉnh lưới dọc theo trục  nội tuyến (hàng)  (trái ngược với  align-content căn chỉnh lưới dọc theo trục  khối (cột) ",
+        "value": [
+          {
+            "id": "JC1",
+            "name": "start",
+            "owner": "justify-content",
+            "description": "Nội dung bên trong đặt về đầu grid container - bên trái container"
+          },
+          {
+            "id": "JC2",
+            "name": "end",
+            "owner": "justify-content",
+            "description": "Nội dung bên trong đặt về cuối grid container - bên phải container"
+          },
+          {
+            "id": "JC3",
+            "name": "center",
+            "owner": "justify-content",
+            "description": "Nội dung bên trong đặt về giữa grid container"
+          },
+          {
+            "id": "JC4",
+            "name": "stretch ",
+            "owner": "justify-content",
+            "description": "Thay đổi kích thước các mục lưới để cho phép lưới lấp đầy toàn bộ chiều rộng của vùng chứa lưới"
+          },
+          {
+            "id": "JC5",
+            "name": "space-around",
+            "owner": "justify-content",
+            "description": "tạo không gian xung quanh các cột của lưới"
+          },
+          {
+            "id": "JC6",
+            "name": "space-evenly",
+            "owner": "justify-content",
+            "description": "tạo không gian đều nhau giữa cột và cột, cột và cạnh container"
+          },
+          {
+            "id": "JC7",
+            "name": "space-between",
+            "owner": "justify-content",
+            "description": "tạo không gian giữa cột và cột, không có cột và cạnh container"
+          }
+        ]
+      },
+
+      "align-content": {
+        "id": 13,
+        "description": "Căn theo hàng, Đôi khi tổng kích thước của lưới của bạn có thể nhỏ hơn kích thước của vùng chứa lưới của nó. Điều này có thể xảy ra nếu tất cả các mục lưới của bạn có kích thước bằng các đơn vị không linh hoạt như  px. Trong trường hợp này, bạn có thể đặt căn chỉnh của lưới trong vùng chứa lưới. Thuộc tính này căn chỉnh lưới dọc theo trục  khối (cột)  (trái ngược với  justify-content căn chỉnh lưới dọc theo  trục (hàng) nội tuyến  ).",
+        "value": [
+          {
+            "id": "AC1",
+            "name": "start",
+            "owner": "align-content",
+            "description": "Đặt bọn bên trong lên trên cùng của container"
+          },
+          {
+            "id": "AC2",
+            "name": "end",
+            "owner": "align-content",
+            "description": "Đặt bọn bên trong xuống dưới cùng của container"
+          },
+          {
+            "id": "AC3",
+            "name": "center",
+            "owner": "align-content",
+            "description": "Đặt bọn bên trong vào giữa của container - giữa theo hàng"
+          },
+          {
+            "id": "AC4",
+            "name": "stretch",
+            "owner": "align-content",
+            "description": "thay đổi kích thước các mục lưới để cho phép lưới lấp đầy chiều cao đầy đủ của vùng chứa lưới"
+          },
+          {
+            "id": "AC5",
+            "name": "space-around",
+            "owner": "align-content",
+            "description": "Thêm không gian xung quanh các hàng"
+          },
+          {
+            "id": "AC6",
+            "name": "space-between",
+            "owner": "align-content",
+            "description": "Thêm không gian xung quanh các hàng, nhưng mà chỉ hàng với hàng, còn hàng với line thì ko"
+          },
+          {
+            "id": "AC7",
+            "name": "space-evenly",
+            "owner": "align-content",
+            "description": "Thêm không gian xung quanh sao cho khoảng cách hàng với hàng với line cotainer bằng nhau"
+          }
+        ]
+      },
+
+      "place-content": {
+        "id": 14,
+        "description": "place-content sets both the align-content and justify-content properties in a single declaration.",
+        "value": [
+          {
+            "id": "PC1",
+            "name": "",
+            "owner": "place-content",
+            "description": "valign-content> / vjustify-content>  - Bộ giá trị đầu tiên  align-content, giá trị thứ hai  justify-content. Nếu giá trị thứ hai bị bỏ qua, giá trị đầu tiên được gán cho cả hai thuộc tính."
+          }
+        ]
+      },
+
+      "grid-auto-columns": {
+        "id": 15,
+        "description": "Explicit và Implicit Grid hay còn gọi là lưới rõ ràng và lưới ngầm định. Khi chúng ta sử dụng grid-template-columns và grid-template-rows, chúng đang ta tạo một lưới (Grid) rõ ràng. Tuy nhiên, nếu chúng ta thử và đặt một item bên ngoài lưới đó, trình duyệt sẽ tạo một đường hoặc đường lưới Implicit Grid để giữ item đó. TỨC LÀ, grid-template-column là 3 cột 100px, mà có tận 4 item, dùng grid-auto-columns 100px, thì grid sẽ tạo 1 lưới ngầm định ôm thằng item thứ 4 bị thừa vào trong chứ k để nó bơ vơ đc",
+        "value": [
+          {
+            "id": "GAC1",
+            "name": "",
+            "owner": "grid-auto-columns",
+            "description": "vtrack-size> - có thể là chiều dài, phần trăm hoặc một phần nhỏ của không gian trống trong lưới (sử dụng  fr đơn vị)"
+          }
+        ]
+      },
+
+      "grid-auto-rows": {
+        "id": 16,
+        "description": "Explicit và Implicit Grid hay còn gọi là lưới rõ ràng và lưới ngầm định. Khi chúng ta sử dụng grid-template-columns và grid-template-rows, chúng đang ta tạo một lưới (Grid) rõ ràng. Tuy nhiên, nếu chúng ta thử và đặt một item bên ngoài lưới đó, trình duyệt sẽ tạo một đường hoặc đường lưới Implicit Grid để giữ item đó. TỨC LÀ, grid-template-column là 3 cột 100px, mà có tận 4 item, dùng grid-auto-columns 100px, thì grid sẽ tạo 1 lưới ngầm định ôm thằng item thứ 4 bị thừa vào trong chứ k để nó bơ vơ đc",
+        "value": [
+          {
+            "id": "GAR1",
+            "name": "",
+            "owner": "grid-auto-rows",
+            "description": "vtrack-size> - có thể là chiều dài, phần trăm hoặc một phần nhỏ của không gian trống trong lưới (sử dụng  fr đơn vị)"
+          }
+        ]
+      },
+
+      "grid-auto-flow": {
+        "id": 17,
+        "description": "Nếu chúng ta không định nghĩa vị trí của một phần tử, thì thuật toán tự động định vị trí của Grid sẽ đặt nó trong khoảng kế tiếp, Trong trường hợp không có đủ khoảng trống trong hàng hiện tại, nó sẽ bắt đầu tìm kiếm hàng phía sau, ngay cả khi nếu điều đó để lại các khoảng trống, Chúng ta có thể chuyển thứ tự tìm kiếm bằng cách thay đổi grid-auto-flow từ row thành column. grid-auto-flow chấp nhận một từ khoá để để mô tả hướng cận 'đóng gói'. Theo mặc định, giá trị này là sparse, nhưng chúng ta có thể thay đổi điều này với dense , điều này cố gắng để lấp vào tất cả vào tất cả các khoảng trống sẵn có.",
+        "value": [
+          {
+            "id": "GAF1",
+            "name": "row",
+            "owner": "grid-auto-flow",
+            "description": "ra lệnh cho thuật toán sắp xếp vị trí tự động lần lượt điền vào từng hàng, thêm các hàng mới nếu cần (mặc định)"
+          },
+          {
+            "id": "GAF2",
+            "name": "column",
+            "owner": "grid-auto-flow",
+            "description": "yêu cầu thuật toán sắp xếp vị trí tự động lần lượt điền vào từng cột, thêm các cột mới nếu cần"
+          },
+          {
+            "id": "GAF3",
+            "name": "dense",
+            "owner": "grid-auto-flow",
+            "description": " cho thuật toán tự động sắp xếp vị trí để cố gắng lấp đầy các lỗ sớm hơn trong lưới nếu các mục nhỏ hơn xuất hiện muộn hơn"
+          }
+        ]
+      },
+
+      "grid": {
+        "id": 18,
+        "description": "A shorthand for setting all of the following properties in a single declaration: grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and grid-auto-flow (Note: You can only specify the explicit or the implicit grid properties in a single grid declaration).",
+        "value": []
+      }
+    },
+    
+    "item": {
+      "grid-column-start": {
+        "id": 1,
+        "description": "Xác định vị trí của 1 item trong lưới bằng cách tham chiếu đến các đường lưới cụ thể || giá trị ví dụ: vnumber> | 'vname>' | span vnumber> | span 'vname>' | auto; NÊN DÙNG VIẾT TẮT CỦA 4 THẰNG NÀY, VIẾT tỪNG CÁI RỐI RẮM VL",
+        "value": [
+          {
+            "id": "GCS1",
+            "name": "",
+            "owner": "grid-column-start",
+            "description": "vline> - có thể là một số để chỉ một đường lưới được đánh số hoặc một tên để chỉ một đường lưới đã đặt tên"
+          }
+        ]
+      },
+
+      "grid-column-end": {
+        "id": 2,
+        "description": "Xác định vị trí của 1 item trong lưới bằng cách tham chiếu đến các đường lưới cụ thể || giá trị ví dụ: vnumber> | 'vname>' | span vnumber> | span 'vname>' | auto; NÊN DÙNG VIẾT TẮT CỦA 4 THẰNG NÀY, VIẾT tỪNG CÁI RỐI RẮM VL",
+        "value": [
+          {
+            "id": "GCE1",
+            "name": "",
+            "owner": "grid-column-end",
+            "description": "vline> - có thể là một số để chỉ một đường lưới được đánh số hoặc một tên để chỉ một đường lưới đã đặt tên"
+          }
+        ]
+      },
+
+      "grid-row-start": {
+        "id": 3,
+        "description": "Xác định vị trí của 1 item trong lưới bằng cách tham chiếu đến các đường lưới cụ thể || giá trị ví dụ: vnumber> | 'vname>' | span vnumber> | span 'vname>' | auto; NÊN DÙNG VIẾT TẮT CỦA 4 THẰNG NÀY, VIẾT tỪNG CÁI RỐI RẮM VL",
+        "value": [
+          {
+            "id": "GRS1",
+            "name": "",
+            "owner": "grid-row-start",
+            "description": "vline> - có thể là một số để chỉ một đường lưới được đánh số hoặc một tên để chỉ một đường lưới đã đặt tên"
+          }
+        ]
+      },
+
+      "grid-row-end": {
+        "id": 4,
+        "description": "Xác định vị trí của 1 item trong lưới bằng cách tham chiếu đến các đường lưới cụ thể || giá trị ví dụ: vnumber> | 'vname>' | span vnumber> | span 'vname>' | auto; NÊN DÙNG VIẾT TẮT CỦA 4 THẰNG NÀY, VIẾT tỪNG CÁI RỐI RẮM VL",
+        "value": [
+          {
+            "id": "GRE1",
+            "name": "",
+            "owner": "grid-row-end",
+            "description": "vline> - có thể là một số để chỉ một đường lưới được đánh số hoặc một tên để chỉ một đường lưới đã đặt tên"
+          }
+        ]
+      },
+
+      "grid-column": {
+        "id": 5,
+        "description": "Xác định vị trí của các item, Shorthand for grid-column-start + grid-column-end, and grid-row-start + grid-row-end, respectively.",
+        "value": [
+          {
+            "id": "GC1",
+            "name": "",
+            "owner": "grid-column",
+            "description": "'vstart-line>' / 'vend-line>' – each one accepts all the same values as the longhand version, including span || 'vstart-line>' / 'vend-line>' | 'vstart-line>' / span vvalue>"
+          }
+        ]
+      },
+
+      "grid-row": {
+        "id": 6,
+        "description": "Xác định vị trí của các item, Shorthand for grid-column-start + grid-column-end, and grid-row-start + grid-row-end, respectively.",
+        "value": [
+          {
+            "id": "GR1",
+            "name": "",
+            "owner": "grid-row",
+            "description": "'vstart-line>' / 'vend-line>' – each one accepts all the same values as the longhand version, including span || 'vstart-line>' / 'vend-line>' | 'vstart-line>' / span vvalue>"
+          }
+        ]
+      },
+
+      "grid-area": {
+        "id": 7,
+        "description": "Đặt tên cho một mục để nó có thể được tham chiếu bởi một mẫu được tạo bằng thuộc  grid-template-areas tính. Ngoài ra, thuộc tính này có thể được sử dụng như một cách viết tắt thậm chí còn ngắn hơn cho  grid-row-start +  grid-column-start +  grid-row-end +  grid-column-end",
+        "value": [
+          {
+            "id": "GA1",
+            "name": "",
+            "owner": "grid-area",
+            "description": "'vname>' - tên bạn chọn | 'vrow-start>' /  'vcolumn-start>' /  'vrow-end>' / 'vcolumn-end>'  - có thể là số hoặc dòng có tên || 'vname>' | 'vrow-start>' / 'vcolumn-start>' / 'vrow-end>' / 'vcolumn-end>'"
+          }
+        ]
+      },
+
+      "justify-self": {
+        "id": 8,
+        "description": "Căn chỉnh một mục lưới bên trong một ô dọc theo trục  nội tuyến (hàng)  (trái ngược với  align-self căn chỉnh dọc theo trục  khối (cột)  ). Giá trị này áp dụng cho một mục lưới bên trong một ô.",
+        "value": [
+          {
+            "id": "JS1",
+            "name": "start",
+            "owner": "justify-self",
+            "description": "Căn cho item về đầu ô"
+          },
+          {
+            "id": "JS2",
+            "name": "end",
+            "owner": "justify-self",
+            "description": "Căn cho item về cuối ô"
+          },
+          {
+            "id": "JS3",
+            "name": "center ",
+            "owner": "justify-self",
+            "description": "Căn cho item về giữa ô"
+          },
+          {
+            "id": "JS4",
+            "name": "stretch ",
+            "owner": "justify-self",
+            "description": "Lấp đày chiều rộng ô"
+          }
+        ]
+      },
+
+      "align-self": {
+        "id": 9,
+        "description": "Căn chỉnh một mục lưới bên trong một ô dọc theo trục  khối (cột)  (trái ngược với  justify-self căn chỉnh dọc theo  trục (hàng) nội tuyến  ). Giá trị này áp dụng cho nội dung bên trong một mục lưới.",
+        "value": [
+          {
+            "id": "AS1",
+            "name": "start",
+            "owner": "align-self",
+            "description": "Căn cho item về đầu ô"
+          },
+          {
+            "id": "AS2",
+            "name": "end",
+            "owner": "align-self",
+            "description": "Căn cho item về cuối ô"
+          },
+          {
+            "id": "AS3",
+            "name": "center",
+            "owner": "align-self",
+            "description": "Căn cho item về giữa ô"
+          },
+          {
+            "id": "AS4",
+            "name": "stretch",
+            "owner": "align-self",
+            "description": "Lấp đày chiều cao ô"
+          }
+        ]
+      },
+
+      "place-self": {
+        "id": 10,
+        "description": "place-self sets both the align-self and justify-self properties in a single declaration.",
+        "value": [
+          {
+            "id": "PS1",
+            "name": "",
+            "owner": "place-self",
+            "description": "auto – The “default” alignment for the layout mode. valign-self> / vjustify-self> – The first value sets align-self, the second value justify-self. If the second value is omitted, the first value is assigned to both properties."
+          }
+        ]
+      }
+    }
+  }
+}
